@@ -1,10 +1,14 @@
-import random #This module implements pseudo-random number generators. 
+iimport random #This module implements pseudo-random number generators. 
 import string #This module lets you do stuff with strings
 
 #get input from the user. Find out their password needs
-min_len = int(input("Your password must be at least how many characters long? Please enter a number: "))
-has_number = input("Do you want your password to include numbers? (Y/N)").upper() == "Y"
-has_special = input("Do you want to have special characters? (Y/N)").upper() == "Y"
+min_len = int(input("Your password must be at least how many characters long? Please enter a number: ")) #int() converts user input to integer since input() returns string
+has_number = input("Do you want your password to include numbers? (Y/N) ").upper() == "Y" 
+has_special = input("Do you want to have special characters? (Y/N) ").upper() == "Y"
+#the upper() method converts user input to uppercase and 
+#The '==' operator asks if the two values on either side are equal. 
+#Hence why both has_number and has_special return True
+#regardless of whether the user enters and uppercase or lowercase 'y'. 
 
 #function to generate password. 
 #the parameters reflect the user's pw needs. 
@@ -23,7 +27,7 @@ def generate_password(min_len, numbers=True,sp_char=True):
     if sp_char:
         characters += special
     
-    #user pw 
+    #user pw and initializes variables to be used in the following loop. 
     pwd = ""
     criteria_met = False
     has_number = False
