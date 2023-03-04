@@ -1,4 +1,4 @@
-iimport random #This module implements pseudo-random number generators. 
+import random #This module implements pseudo-random number generators. 
 import string #This module lets you do stuff with strings
 
 #get input from the user. Find out their password needs
